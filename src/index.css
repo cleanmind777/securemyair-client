@@ -1,0 +1,112 @@
+/** @format */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: rgb(63, 62, 62) !important;
+}
+
+/* * {
+  touch-action: manipulation;
+} */
+
+.loginContainer {
+  background-color: #f0f8ff;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+@media (min-aspect-ratio: 8/5) {
+  .logo {
+    width: 30vh;
+  }
+}
+@media (max-aspect-ratio: 3/2) {
+  .logo {
+    width: 30vh;
+  }
+}
+.machineBox {
+  border-style: solid;
+  border-radius: 1vh;
+  border-color: grey;
+  margin: 2vh;
+  height: 24vh;
+}
+.machine {
+  padding-inline: 2vh;
+  font-size: 20vh;
+  text-decoration: none;
+  border-bottom: solid;
+  border-color: grey;
+  line-height: 0.9;
+  text-align: center;
+  font-family: Arial Black, Alfa Slab One, cursive;
+  text-shadow: 1px 10px 10px rgb(0 0 0 / 50%);
+}
+.machineName {
+  text-align: center;
+  margin: 10px;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 2.7vh;
+}
+
+.colorA {
+  color: #19c424;
+}
+.colorB {
+  color: #ffe435;
+}
+.colorC {
+  color: #ffa100;
+}
+.colorD {
+  color: #ef8625;
+}
+.colorE {
+  color: #ff0000;
+}
+.colorF {
+  color: #ff0000;
+}
+.gray {
+  color: gray;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.iconsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#outer {
+  height: 50vh;
+  aspect-ratio: 1/1;
+}
+.loginField {
+  margin-block: 5vh;
+  height: 5vh;
+  font-size: 2vh !important;
+}
+.loginField label {
+  font-size: 2vh;
+}
+.loginField input {
+  font-size: 3vh;
+}
