@@ -1,13 +1,13 @@
 ## SecureMyAir Client Dashboard
 
 React client for the **SecureMyAir** indoor airquality monitoring and control system.  
-This app renders a TVstyle dashboard showing live HVAC status, AQI letter grades, and detailed sensor readings for humidity, CO‚, VOC, particulate matter, and more. It is built with **Create React App**, **React Router**, and **MUI**.
+This app renders a TVstyle dashboard showing live HVAC status, AQI letter grades, and detailed sensor readings for humidity, CO?, VOC, particulate matter, and more. It is built with **Create React App**, **React Router**, and **MUI**.
 
 ### Key Features
 
 - **Realtime dashboard**: Polls backend endpoints (e.g. `dashboard.php`, `advertisment.php`) to display live airquality data.
 - **AQI letter grading**: Large animated AF grade with contextual color and messaging (Good / Fair / Unhealthy / Critical).
-- **Sensor cards**: Humidity, CO‚, VOC, PM2.5, PM10 tiles with levelbased colors and animations.
+- **Sensor cards**: Humidity, CO?, VOC, PM2.5, PM10 tiles with levelbased colors and animations.
 - **Machine & control views**: Separate pages for machine list, dashboard, and time control.
 - **Protected routes**: `Dashboard`, `Machines`, and `Control` are wrapped by `Protected` and require authentication.
 - **TV / kiosk ready UI**: Fullscreen layout optimized for wall displays with autohiding controls.
@@ -31,6 +31,28 @@ This app renders a TVstyle dashboard showing live HVAC status, AQI letter grade
 ```bash
 npm install
 ```
+
+### Environment variables (`.env`)
+
+- Create a `.env` file in the project root for local configuration.
+- **Do not commit `.env`** ? it is listed in `.gitignore`. Use `.env.example` as a template:
+
+  ```bash
+  cp .env.example .env
+  ```
+
+- In Create React App, only variables prefixed with `REACT_APP_` are embedded in the build (e.g. `REACT_APP_API_URL`). Edit `.env` and restart `npm start` after changes.
+- For production, configure environment variables in your hosting platform (e.g. Netlify, Vercel, or your server) instead of committing secrets.
+
+### `.gitignore`
+
+The repo uses a root `.gitignore` that excludes:
+
+- `node_modules/`, `/build`, and test output
+- **`.env` and env variants** (`.env.local`, `.env.production.local`, etc.) so secrets stay out of version control
+- Logs, editor/IDE folders, and common misc files
+
+Keep `.env` local and use `.env.example` to document required or optional variables for other developers.
 
 ### Running the app (development)
 
