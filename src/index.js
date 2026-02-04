@@ -6,8 +6,7 @@ import './index.css'
 import App from './App'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost/php/client';
-// axios.defaults.baseURL = 'https://api.securemyair.com/client'
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost/php/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
